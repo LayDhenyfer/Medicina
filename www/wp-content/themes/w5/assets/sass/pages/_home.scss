@@ -1,0 +1,565 @@
+.home {
+  &:before {
+    content: "";
+    width: 33%;
+    height: 75rem;
+    background: #4a72b0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-20%);
+    z-index: -1;
+
+    @include allMin(1280, 1281) {
+      width: 30%;
+    }
+    @include allMin(1300, 1366) {
+      width: 26%;
+    }
+    @include allMin(1400, 1600) {
+      width: 29%;
+    }
+    @include min(2000) {
+      width: 37.5%;
+    }
+
+    @include sm {
+      height: 60rem;
+    }
+  }
+  &:after {
+    content: "";
+    width: 33%;
+    height: 75rem;
+    background-image: url(../images/homem-vitruviano.png);
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-20%);
+    z-index: -1;
+    opacity: 1;
+    filter: brightness(0.5);
+    background-size: cover;
+
+    @include allMin(1280, 1281) {
+      width: 30%;
+    }
+    @include allMin(1300, 1366) {
+      width: 26%;
+    }
+    @include allMin(1400, 1600) {
+      width: 29%;
+    }
+    @include min(2000) {
+      width: 37.5%;
+    }
+
+    @include sm {
+      height: 60rem;
+    }
+  }
+
+  .initial {
+    margin: 7rem 0 4.5rem;
+
+    .wrapper {
+      display: flex;
+
+      @include sm {
+        flex-wrap: wrap;
+      }
+    }
+
+    &__resume {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      width: 49%;
+      @include sm {
+        width: 90%;
+      }
+
+      &--heading {
+        font-size: 6rem;
+        width: 90%;
+        color: #4a72b0;
+        @include sm {
+          font-size: 4rem;
+        }
+      }
+
+      &--dots {
+        font-size: 3.2rem;
+        letter-spacing: 0.42rem;
+        color: #34517d;
+        line-height: 2rem;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      &--text {
+        font-size: 2.5rem;
+        margin: 2rem 0 2.5rem;
+        color: #34517d;
+
+        @include sm {
+          font-size: 2rem;
+        }
+
+        strong {
+          &:first-child {
+            font-size: 2.9rem;
+          }
+        }
+      }
+    }
+
+    &__img {
+      max-height: 550px;
+      max-width: 440px;
+      margin-left: 6rem;
+
+      img {
+        height: 100%;
+        border-radius: 4rem;
+        object-fit: cover;
+        object-position: top center;
+        width: 100%;
+        box-shadow: 3rem 2rem 4rem rgb(0 0 0 / 25%);
+      }
+
+      @include sm {
+        max-height: 40rem;
+        max-width: 100%;
+        margin: 4rem 0;
+        order: -1;
+      }
+    }
+  }
+
+  .doctor {
+    padding: 15rem 0 40rem;
+    background: rgb(74 114 176);
+
+    @include sm {
+      padding: 5rem 0;
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      @include sm {
+        flex-wrap: wrap;
+      }
+    }
+
+    &__imgs {
+      display: flex;
+      width: 40%;
+      margin-left: 4rem;
+      padding: 0 1.4rem;
+      figure {
+        &:last-child {
+          padding-top: 3rem;
+        }
+        img {
+          transition: all 0.5s;
+          height: 27rem;
+          width: 21rem;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 3rem;
+          box-shadow: 3rem 2rem 4rem rgb(0 0 0 / 25%);
+
+          @include allMin(768,800) {
+            width: 26rem;
+          }
+          &:hover {
+              opacity: .8;
+          }
+        }
+      }
+
+      @include sm {
+        width: 100%;
+        margin-left: 0;
+        gap: 1rem;
+      }
+ 
+      @include allMin(768,800) {
+        width: 70%;
+        margin: auto;
+      }
+    }
+
+    &__resume {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      width: 51.5%;
+      padding-left: 3rem;
+
+      &--heading {
+        font-size: 6rem;
+        color: #fff;
+        @include sm {
+          font-size: 4rem;
+        }
+      }
+
+      &--dots {
+        font-size: 3.2rem;
+        letter-spacing: 0.42rem;
+        color: #ffff;
+        line-height: 2rem;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      &--text {
+        font-size: 2.5rem;
+        margin: 2rem 0 2.5rem;
+        color: #fff;
+
+        strong {
+          &:first-child {
+            font-size: 2.9rem;
+          }
+        }
+      }
+
+      @include sm {
+        width: 100%;
+        padding: 0 0 2rem;
+        order: -1;
+      }
+    }
+
+    .especialties {
+      position: absolute;
+      transform: translate(-50%, 38%);
+      bottom: 0;
+      left: 50%;
+      z-index: 2;
+
+      @include sm {
+        position: relative;
+        transform: translate(0);
+        left: 0;
+      }
+
+      &__heading {
+        font-size: 6rem;
+        color: rgb(255 255 255);
+        text-align: center;
+        padding: 5rem 0;
+
+        @include sm {
+          font-size: 4rem;
+        }
+      }
+
+      &__cards {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+
+        @include sm {
+          flex-wrap: wrap;
+        }
+
+        figure {
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          flex: 0 0 22rem;
+          gap: 4rem;
+
+          @include sm {
+            flex: 0 0 20rem;
+            padding-bottom: 4rem;
+            gap: 1rem;
+          }
+
+          div {
+            border-radius: 3rem;
+            background: #fff;
+            box-shadow: 3rem 2rem 4rem rgb(0 0 0 / 25%);
+            width: 95%;
+            flex: 0 0 24rem;
+            padding: 7rem 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: all 0.5s;
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+            img {
+              object-fit: cover;
+              height: 13rem;
+            }
+
+            &:hover {
+              img {
+                transform: scale(1.1);
+                overflow: hidden;
+                transition: all 0.5s;
+              }
+            }
+          }
+
+          figcaption {
+            font-size: 1.9rem;
+            line-height: 3rem;
+            color: rgb(52 81 125);
+            font-weight: 700;
+            text-align: center;
+
+            @include sm {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-image: url(../images/bg-vetor.png);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .personal {
+    padding: 25rem 0 5rem;
+
+    .wrapper {
+      z-index: 1;
+      position: relative;
+    }
+
+    @include sm {
+      padding: 0;
+    }
+
+    @include allMin(1024,1025) {
+      padding: 30rem 0 10rem;
+    }
+
+    &__heading {
+      font-size: 6rem;
+      color: rgb(74 114 176);
+      text-align: center;
+      padding: 5rem 0;
+
+      @include sm {
+        font-size: 4rem;
+      }
+    }
+
+    &__cards {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 8rem;
+
+      @include sm {
+        flex-wrap: wrap;
+      }
+
+      &--items {
+        display: flex;
+        flex: 0 0 30rem;
+        flex-flow: column;
+        align-items: center;
+        gap: 2rem;
+        background: #fff;
+        border-radius: 2rem;
+        box-shadow: 3rem 2rem 4rem rgb(0 0 0 / 25%);
+
+        @include sm {
+          margin-bottom: 3rem;
+          flex: 0 0 34rem;
+        }
+
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+
+        figure {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          overflow: hidden;
+          transition: all 0.5s;
+          border-top-left-radius: 2rem;
+          border-top-right-radius: 2rem;
+
+          img {
+            width: 100%;
+            height: 21rem;
+            object-fit: cover;
+            object-position: center;
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+            filter: brightness(0.8);
+          }
+
+          span {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+
+            svg {
+              width: 5rem;
+            }
+          }
+
+          &:hover {
+            img {
+              transform: scale(1.1);
+              overflow: hidden;
+              transition: all 0.5s;
+            }
+          }
+        }
+
+        div {
+          padding: 0 2.5rem 3rem;
+          color: rgb(74 114 176);
+
+          h2 {
+            font-size: 1.5rem;
+            line-height: 1.8rem;
+            font-weight: 700;
+          }
+
+          p {
+            font-size: 1.2rem;
+            padding: 1.5rem 0 2rem;
+            font-weight: 500;
+          }
+          span {
+            font-size: 1rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    &:before {
+      content: "";
+      width: 80%;
+      height: 100%;
+      background-image: url(../images/homem-vitruviano-two.png);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY(10%);
+      z-index: -1;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .where {
+    background-color: rgb(52 81 125);
+    padding: 4rem;
+
+    &__heading {
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+      font-weight: 700;
+      color: rgb(255 255 255);
+      text-align: center;
+      padding-bottom: 4rem;
+    }
+
+    &__cards {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      gap: 2rem;
+      align-items: baseline;
+
+      @include sm {
+        flex-wrap: wrap;
+      }
+
+      &--items {
+        background: rgb(255 255 255);
+        border-radius: 2rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        flex: 0 0 29rem;
+        height: 55rem;
+        & > div {
+          padding: 2rem 3rem;
+          width: 90%;
+          height: 80%;
+          p {
+            font-size: 1.2rem;
+            color: rgb(52 81 125);
+            margin: auto;
+            font-weight: 500;
+
+            &:first-of-type {
+              font-weight: 700;
+              border-top: 0.2rem solid rgb(229 233 239);
+              padding-top: 3rem;
+            }
+
+            &:not(:last-child) {
+              padding-bottom: 2rem;
+            }
+
+            span {
+              font-weight: 700;
+            }
+          }
+        }
+        .logo {
+          height: 13rem;
+          width: 18rem;
+          margin: 0 auto 3rem;
+
+          img {
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+          }
+        }
+        .map {
+          display: flex;
+          width: 100%;
+          height: 21rem;
+          iframe {
+            width: 100%;
+            height: 100%;
+            max-height: 19rem;
+            border-bottom-right-radius: 2rem;
+            border-bottom-left-radius: 2rem;
+          }
+        }
+
+        @include sm {
+          flex: 0 0 35rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "assets",
+  "version": "1.0.0",
+  "description": "Compilador de sass",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass sass/main.scss css/main.css -w --style=compressed --source-map"
+  },
+  "author": "Laylia",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.49.9"
+  },
+  "devDependencies": {}
+}

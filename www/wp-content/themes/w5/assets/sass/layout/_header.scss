@@ -1,0 +1,224 @@
+.header {
+  padding-top: 2rem;
+  max-height: 100%;
+  display: flex;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    h1 {
+      font-size: 0;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+
+      li {
+        &:not(:last-child) {
+          margin-right: 3.5rem;
+        }
+
+        a {
+          font-size: 1.2rem;
+          color: #4a72b0;
+          font-weight: 500;
+          position: relative;
+          transition: 0.3s ease;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0.15rem;
+            background-color: #4a72b0;
+            transition: 0.3s ease-out;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .social__medias {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 11rem;
+
+    @include allMin(1024,1025) {
+      padding-left: 6rem;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      transition: 0.3s ease-out;
+      svg {
+        width: 100%;
+      }
+
+      &:last-child {
+        background-color: #fff;
+        border: 0.1rem solid #4a72b0;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1.5rem;
+        margin-left: 0.3rem;
+        transition: 0.3s ease-out;
+
+        span {
+          color: #4a72b0;
+          font-weight: 600;
+          line-height: 2.2rem;
+          font-size: 1.2rem;
+        }
+
+        svg {
+          height: 1.7rem;
+          padding-left: 1.4rem;
+          transition: 0.4s ease-out;
+        }
+
+        &:hover {
+          background-color: #4a72b0;
+          border: 0.1rem solid rgb(255 255 255);
+          span {
+            color: #fff;
+          }
+          svg {
+            path {
+              fill: #fff;
+            }
+          }
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+        svg {
+          height: 2.7rem;
+          &:hover {
+            path {
+              fill: rgb(52 81 125);
+              transition: 0.4s ease-out;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__single {
+    .social__medias {
+      a {
+        display: flex;
+        align-items: center;
+        transition: 0.3s ease-out;
+        svg {
+          width: 100%;
+          path {
+            fill: #4a72b0;
+          }
+        }
+
+        &:last-child {
+          background-color: #4a72b0;
+          span {
+            color: #fff;
+          }
+          svg {
+            path {
+              fill: #fff;
+            }
+          }
+
+          &:hover {
+            background-color: #fff;
+            border: 0.1rem solid #4a72b0;
+            span {
+              color: #4a72b0;
+            }
+            svg {
+              path {
+                fill: #4a72b0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.scroll {
+    background: rgb(255 255 255);
+    border-bottom: 0.1rem solid rgb(242 242 242);
+    box-shadow: 0 0.2rem 1.4rem rgb(52 81 125 / 13%);
+    padding-bottom: 2rem;
+
+    .header__nav {
+      ul {
+        li {
+          a {
+            &::after {
+              bottom: -1rem;
+            }
+          }
+        }
+      }
+
+      .social__medias {
+        a {
+          svg {
+            path {
+              fill: #4a72b0;
+            }
+          }
+
+          &:last-child {
+            background-color: #4a72b0;
+            span {
+              color: #fff;
+            }
+            svg {
+              path {
+                fill: #fff;
+              }
+            }
+
+            &:hover {
+              background-color: #fff;
+              border: 0.1rem solid #4a72b0;
+              span {
+                color: #4a72b0;
+              }
+              svg {
+                path {
+                  fill: #4a72b0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+footer {
+  padding: 4rem 5rem 2rem;
+
+  @include sm {
+    padding: 4rem 0;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include sm {
+      flex-wrap: wrap;
+    }
+  }
+
+  nav {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    @include sm {
+      flex-wrap: wrap;
+      padding-top: 3rem;
+    }
+
+    div {
+      color: rgb(74 114 176);
+      flex: 0 0 25rem;
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: auto;
+        padding-bottom: 3.5rem;
+      }
+
+      ul {
+        li {
+          font-size: 1.2rem;
+          font-weight: 500;
+          padding-bottom: 1rem;
+        }
+      }
+
+      &:last-child {
+        ul {
+          li {
+            padding-bottom: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .logo {
+    display: flex;
+    flex-flow: column;
+
+    @include min(769) {
+      flex: 1;
+    }
+    &__sociais {
+      padding-bottom: 2rem;
+      &--media {
+        transition: all 0.3s ease;
+        svg {
+          width: 3rem;
+          height: 100%;
+        }
+
+        &-fb {
+          &:hover {
+            svg {
+              path:first-of-type {
+                fill: rgb(48 89 176);
+              }
+            }
+          }
+        }
+        &-insta {
+          &:hover {
+            svg {
+              path:first-of-type {
+                fill: #517fa4;
+              }
+            }
+          }
+        }
+        &-yt {
+          &:hover {
+            svg {
+              path:first-of-type {
+                fill: rgb(205 32 31);
+              }
+            }
+          }
+        }
+        &-wpp {
+          &:hover {
+            svg {
+              path:first-of-type {
+                fill: #34af23;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    border-top: 0.1rem solid rgb(52 81 125);
+    margin-top: 3rem;
+    padding-top: 2rem;
+    span {
+      font-size: 1.2rem;
+      color: rgb(52 81 125);
+      margin: auto;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: "Open-Sans", sans-serif;
+      text-align: center;
+    }
+  }
+}

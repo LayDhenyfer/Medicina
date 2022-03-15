@@ -1,0 +1,165 @@
+.profissional {
+  .banner {
+    padding-top: 5rem;
+    margin-bottom: 7rem;
+    figure {
+      width: 110rem;
+      margin: auto;
+      position: relative;
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      @include sm {
+        width: 100%;
+      }
+
+      figcaption {
+        position: absolute;
+        transform: translateY(0);
+        top: 45%;
+        right: 0;
+        line-height: 60px;
+        color: rgb(252 252 253);
+        display: flex;
+        flex-flow: column;
+        width: 44%;
+
+        @include sm {
+          width: 50%;
+          line-height: 2rem;
+        }
+
+        .motivation {
+          font-size: 5rem;
+          font-weight: 400;
+
+          @include sm {
+            font-size: 2rem;
+          }
+        }
+
+        .author {
+          font-size: 4rem;
+          font-weight: 700;
+
+          @include sm {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    margin-bottom: 10rem;
+    .wrapper {
+      width: 85rem;
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      @include sm {
+        width: 80%;
+      }
+
+      p {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: rgb(74 114 176);
+        line-height: 2.5rem;
+        padding-bottom: 2rem;
+
+        &:first-of-type {
+          padding-top: 7rem;
+        }
+      }
+    }
+
+    &__dots {
+      font-size: 3.2rem;
+      letter-spacing: 0.42rem;
+      color: rgb(74 114 176);
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+
+  .places {
+    background-color: rgb(52 81 125);
+    padding: 3rem 0 3.5rem;
+
+    .wrapper {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__heading {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 2.5rem;
+      padding-bottom: 2rem;
+    }
+
+    &__warning {
+      font-size: 1.2rem;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    &__cards {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1rem 0 3rem;
+
+      @include sm {
+        flex-wrap: wrap;
+      }
+
+      figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 23rem;
+        background: #fff;
+        border-radius: 2rem;
+        padding: 3rem 2rem;
+        box-shadow: 3rem 2rem 2rem rgb(0 0 0 / 22%);
+
+        @include sm {
+          flex: 0 0 30rem;
+        }
+
+        img {
+          height: 10rem;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-image: url(../images/bg-vetor.png);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      background-size: cover;
+      background-position: bottom;
+      background-repeat: no-repeat;
+    }
+  }
+}

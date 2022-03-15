@@ -1,0 +1,156 @@
+@media (max-width: 768px) {
+    .header {
+        .hamburguer {
+            background-color: #fff;
+            &:before,
+            &:after {
+                background-color: #fff;
+            }
+            &.active {
+                &:before,
+                &:after {
+                    background-color: rgb(74 114 176);
+                }
+            }
+        }
+        &.scroll {
+            .hamburguer {
+                background-color: rgb(74 114 176);
+                &:before,
+                &:after {
+                    background-color: rgb(74 114 176);
+                }
+            }
+        }
+        &__single {
+            .hamburguer {
+                background-color: rgb(74 114 176);
+                &:before,
+                &:after {
+                    background-color: rgb(74 114 176);
+                }
+            }
+        }
+        div.social__medias {
+            a {
+                svg {
+                    path {
+                        fill: #4a72b0;
+                    }
+                }
+                &:last-child {
+                    background-color: #4a72b0;
+                    span {
+                        color: #fff;
+                    }
+                    svg {
+                        path {
+                            fill: #fff;
+                        }
+                    }
+                    &:hover {
+                        background-color: #fff;
+                        border: 0.1rem solid #4a72b0;
+                        span {
+                            color: #4a72b0;
+                        }
+                        svg {
+                            path {
+                                fill: #4a72b0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .hamburguer {
+        outline: none;
+        position: absolute;
+        top: 40px;
+        right: 3%;
+        transform: translate(-40%, -50%);
+        width: 4.5rem;
+        height: 3px;
+        display: inline-block;
+        z-index: 7;
+    }
+    .hamburguer::before,
+    .hamburguer::after {
+        width: 4.5rem;
+        height: 3px;
+        display: inline-block;
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all 0.2s;
+    }
+    .hamburguer::before {
+        top: -1rem;
+    }
+    .hamburguer::after {
+        top: 1rem;
+    }
+    .hamburguer.active {
+        background-color: transparent;
+    }
+    .hamburguer.active::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    .hamburguer.active::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+    .header__logo {
+        z-index: 6;
+    }
+    .header .wrapper.only-mobile {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: #fff;
+        width: 100%;
+        z-index: 5;
+        border: 1px solid rgb(221 221 221);
+        transform: translateX(-100%);
+        transition: .3s all;
+        height: 100vh;
+        overflow: auto;
+        flex-flow: column;
+        justify-content: flex-start;
+        &.active {
+            transform: translateX(0%);
+            transition: .3s all;
+        }
+        nav.header__nav {
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 15rem;
+            ul {
+                flex-direction: column;
+                li {
+                    text-align: center;
+                    margin-right: 0;
+                    a {
+                        font-size: 2rem;
+                        line-height: 5rem;
+                    }
+                }
+            }
+            .social__medias {
+                padding: 0;
+            }
+        }
+    }
+}
+
+
+@include min(1024) {
+    .header .wrapper.only-mobile {
+        display: none;
+        visibility: hidden;
+        overflow: hidden;
+
+    }
+}

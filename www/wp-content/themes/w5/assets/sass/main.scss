@@ -1,0 +1,22 @@
+//Abstracts
+@import 'abstracts/utilities';
+@import 'abstracts/variables';
+
+// Base
+@import 'base/media-queries';
+@import 'base/reset';
+
+// Components
+@import 'components/buttons';
+@import 'components/menu-mobile';
+
+// Layout
+@import 'layout/footer';
+@import 'layout/header';
+
+// Pages
+@import 'pages/home';
+@import 'pages/procedimento';
+@import 'pages/profissional';
+@import 'pages/single';
+@import 'pages/videos';
